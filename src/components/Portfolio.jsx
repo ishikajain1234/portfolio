@@ -13,7 +13,7 @@ const projects = [
     title: "Foodie",
     description: "A food delivery app showcasing React and API integration.",
     image: foodie,
-    demo: "#",
+    demo: "https://mini-project-beta-kohl.vercel.app/",
     code: "https://github.com/ishikajain1234/mini-project",
   },
   {
@@ -33,14 +33,7 @@ const projects = [
     demo: "#",
     code: "https://github.com/ishikajain1234/AKTU-GHAR",
   },
-  {
-    id: 4,
-    title: "Spotify Clone",
-    description: "A clone of Spotify built with HTML and CSS showcasing a sleek UI design.",
-    image: spotify,
-    demo: "#",
-    code: "https://github.com/ishikajain1234/Spotify-Clone",
-  },
+  
   {
     id: 5,
     title: "To-Do App",
@@ -56,6 +49,14 @@ const projects = [
     image: parallax,
     demo: "#",
     code: "https://github.com/ishikajain1234/project1",
+  },
+  {
+    id: 4,
+    title: "Spotify Clone",
+    description: "A clone of Spotify built with HTML and CSS showcasing a sleek UI design.",
+    image: spotify,
+    demo: "https://spotify-clone-orcin-two.vercel.app/",
+    code: "https://github.com/ishikajain1234/Spotify-Clone",
   },
 ];
 
