@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
@@ -34,7 +34,10 @@ function Navbar() {
 
   return (
     <div className="flex justify-between items-center w-full h-20 px-4 text-white fixed bg-black z-50">
-      <h1 className="text-4xl font-signature">Welcome!!</h1>
+      {/* Normal text for the name */}
+      <h1 className="text-xl">
+        Ishika Jain | Mern Stack Developer
+      </h1>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex">
@@ -42,7 +45,7 @@ function Navbar() {
           <Link
             to="home"
             smooth={true}
-            duration={500}
+            duration={300}
             className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-cyan-500 transition-all duration-200"
           >
             Home
@@ -52,7 +55,7 @@ function Navbar() {
           <Link
             to="intro"
             smooth={true}
-            duration={500}
+            duration={300}
             className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-cyan-500 transition-all duration-200"
           >
             About
@@ -62,7 +65,7 @@ function Navbar() {
           <Link
             to="achievements"
             smooth={true}
-            duration={500}
+            duration={300}
             className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-cyan-500 transition-all duration-200"
           >
             Achievements
@@ -72,7 +75,7 @@ function Navbar() {
           <Link
             to="skills"
             smooth={true}
-            duration={500}
+            duration={300}
             className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-cyan-500 transition-all duration-200"
           >
             Skills
@@ -82,7 +85,7 @@ function Navbar() {
           <Link
             to="portfolio"
             smooth={true}
-            duration={500}
+            duration={300}
             className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-cyan-500 transition-all duration-200"
           >
             Projects
@@ -92,7 +95,7 @@ function Navbar() {
           <Link
             to="contact"
             smooth={true}
-            duration={500}
+            duration={300}
             className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-cyan-500 transition-all duration-200"
           >
             Contact
@@ -119,7 +122,7 @@ function Navbar() {
             <Link
               to="home"
               smooth={true}
-              duration={500}
+              duration={300}
               className="capitalize hover:text-cyan-500 duration-200"
               onClick={() => setNav(false)}
             >
@@ -130,7 +133,7 @@ function Navbar() {
             <Link
               to="intro"
               smooth={true}
-              duration={500}
+              duration={300}
               className="capitalize hover:text-cyan-500 duration-200"
               onClick={() => setNav(false)}
             >
@@ -141,7 +144,7 @@ function Navbar() {
             <Link
               to="achievements"
               smooth={true}
-              duration={500}
+              duration={300}
               className="capitalize hover:text-cyan-500 duration-200"
               onClick={() => setNav(false)}
             >
@@ -152,7 +155,7 @@ function Navbar() {
             <Link
               to="skills"
               smooth={true}
-              duration={500}
+              duration={300}
               className="capitalize hover:text-cyan-500 duration-200"
               onClick={() => setNav(false)}
             >
@@ -163,7 +166,7 @@ function Navbar() {
             <Link
               to="portfolio"
               smooth={true}
-              duration={500}
+              duration={300}
               className="capitalize hover:text-cyan-500 duration-200"
               onClick={() => setNav(false)}
             >
@@ -174,7 +177,7 @@ function Navbar() {
             <Link
               to="contact"
               smooth={true}
-              duration={500}
+              duration={300}
               className="capitalize hover:text-cyan-500 duration-200"
               onClick={() => setNav(false)}
             >

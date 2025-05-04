@@ -11,6 +11,6 @@
 @layer base{
   html{
     font-family: "Raleway", serif;
-  
+    scroll-behavior: smooth;
   }
 }

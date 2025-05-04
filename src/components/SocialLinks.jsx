@@ -27,7 +27,7 @@ function SocialLinks() {
       id: 4,
       name: "Resume",
       icon: <BsFillPersonLinesFill size={25} />,
-      href: "/mera%20resume.pdf",
+      href: "/Ishika_Jain.pdf",
       download: true,
     },
   ];

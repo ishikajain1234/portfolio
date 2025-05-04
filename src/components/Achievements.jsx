@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaCode, FaTrophy } from 'react-icons/fa'; 
-import { SiLeetcode } from 'react-icons/si'; 
+import { FaGithub, FaTrophy } from 'react-icons/fa'; 
+import { SiLeetcode, SiCodechef, SiCodeforces } from 'react-icons/si'; 
+import Card from './Card';
 
 const Achievements = () => {
   return (
@@ -27,134 +28,85 @@ const Achievements = () => {
           </motion.p>
         </div>
 
-        
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center"
           initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 60 }}
         >
-         
+          {/* ICPC Regionals */}
           <motion.div
-            className="bg-gray-900 p-8 rounded-lg shadow-xl transform transition duration-500 hover:scale-105 hover:shadow-2xl"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="card w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg p-6">
-              <h3 className="text-3xl font-bold mb-4 text-center text-white">ICPC Regionals</h3>
-              <p className="text-lg text-white mb-4 text-center">
-                Participated in the ICPC Regionals, showcasing my competitive programming skills and got 329 rank.
-              </p>
-              <div className="flex justify-center space-x-4">
-                <a
-                  href="https://www.linkedin.com/in/ishika-jain-3343b6253/?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAD6HeVgB0vmO8HnBV2D-yeidvgCLGFFCEIQ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-2 bg-white text-gray-900 rounded-lg hover:bg-pink-600 transition"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
+            <Card
+              title="ICPC Regionals"
+              description="Ranked 329 in ICPC Regionals, showcasing competitive programming skills."
+              link="https://www.linkedin.com/in/ishika-jain-3343b6253/?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAD6HeVgB0vmO8HnBV2D-yeidvgCLGFFCEIQ"
+              linkText="Learn More"
+              icon={<FaTrophy size={50} className="text-white" />}
+            />
           </motion.div>
 
           {/* LeetCode Achievement */}
           <motion.div
-            className="bg-gray-900 p-8 rounded-lg shadow-xl transform transition duration-500 hover:scale-105 hover:shadow-2xl"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="card w-full bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 rounded-lg p-6">
-              <h3 className="text-3xl font-bold mb-4 text-center text-white">LeetCode Profile</h3>
-              <div className="flex justify-center items-center mb-4">
-                <SiLeetcode size={60} className="text-white" />
-                <p className="ml-4 text-xl font-semibold text-white">Solved 800+ questions and attained a 1700+ rating</p>
-              </div>
-              <div className="flex justify-center space-x-4">
-                <a
-                  href="https://leetcode.com/u/ishikajain1234/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-2 bg-white text-gray-900 rounded-lg hover:bg-pink-600 transition"
-                >
-                  View Profile
-                </a>
-              </div>
-            </div>
+            <Card
+              title="LeetCode Profile"
+              description="Solved 800+ questions, attained a 1700+ rating."
+              link="https://leetcode.com/u/ishikajain1234/"
+              linkText="View Profile"
+              icon={<SiLeetcode size={50} className="text-white" />}
+            />
           </motion.div>
 
           {/* GitHub Achievement */}
           <motion.div
-            className="bg-gray-900 p-8 rounded-lg shadow-xl transform transition duration-500 hover:scale-105 hover:shadow-2xl"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="card w-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-lg p-6">
-              <h3 className="text-3xl font-bold mb-4 text-center text-white">GitHub Profile</h3>
-              <div className="flex justify-center items-center mb-4">
-                <FaGithub size={60} className="text-white" />
-                <p className="ml-4 text-xl font-semibold text-white">Contributed to multiple open-source projects.</p>
-              </div>
-              <div className="flex justify-center space-x-4">
-                <a
-                  href="https://github.com/ishikajain1234?tab=repositories"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-2 bg-white text-gray-900 rounded-lg hover:bg-pink-600 transition"
-                >
-                  View GitHub
-                </a>
-              </div>
-            </div>
+            <Card
+              title="GitHub Profile"
+              description="Contributed to multiple open-source projects."
+              link="https://github.com/ishikajain1234?tab=repositories"
+              linkText="View GitHub"
+              icon={<FaGithub size={50} className="text-white" />}
+            />
           </motion.div>
 
           {/* CodeChef Achievement */}
           <motion.div
-            className="bg-gray-900 p-8 rounded-lg shadow-xl transform transition duration-500 hover:scale-105 hover:shadow-2xl"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <div className="card w-full bg-gradient-to-r from-red-500 via-yellow-500 to-orange-500 rounded-lg p-6">
-              <h3 className="text-3xl font-bold mb-4 text-center text-white">CodeChef Profile</h3>
-              <p className="text-lg text-white mb-4 text-center">3* on Codechef,Achieved a 1600+ rating with global rank 129,185,436</p>
-              <div className="flex justify-center space-x-4">
-                <a
-                  href="https://www.codechef.com/users/jainishika072"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-2 bg-white text-gray-900 rounded-lg hover:bg-pink-600 transition"
-                >
-                  View Profile
-                </a>
-              </div>
-            </div>
+            <Card
+              title="CodeChef Profile"
+              description="3* on CodeChef, achieved 1600+ rating, global rank 129,185,436."
+              link="https://www.codechef.com/users/jainishika072"
+              linkText="View Profile"
+              icon={<SiCodechef size={50} className="text-white" />}
+            />
           </motion.div>
 
           {/* Codeforces Achievement */}
           <motion.div
-            className="bg-gray-900 p-8 rounded-lg shadow-xl transform transition duration-500 hover:scale-105 hover:shadow-2xl"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <div className="card w-full bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 rounded-lg p-6">
-              <h3 className="text-3xl font-bold mb-4 text-center text-white">Codeforces Profile</h3>
-              <p className="text-lg text-white mb-4 text-center">Earned 1150+rating</p>
-              <div className="flex justify-center space-x-4">
-                <a
-                  href="https://codeforces.com/profile/Ishikajain04"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-2 bg-white text-gray-900 rounded-lg hover:bg-pink-600 transition"
-                >
-                  View Profile
-                </a>
-              </div>
-            </div>
+            <Card
+              title="Codeforces Profile"
+              description="Earned a 1150+ rating on Codeforces."
+              link="https://codeforces.com/profile/Ishikajain04"
+              linkText="View Profile"
+              icon={<SiCodeforces size={50} className="text-white" />}
+            />
           </motion.div>
         </motion.div>
       </div>
